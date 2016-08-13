@@ -35,7 +35,7 @@ CROSS_COMPILE_TARGETS="
 
 LICENCES="as-is"
 SLOT="0"
-PLATFORMS="~amd64 ~armv7"
+PLATFORMS="~amd64 ~armv6 ~armv7"
 MYOPTIONS="
     ( targets: ${CROSS_COMPILE_TARGETS} ) [[ number-selected = at-least-one ]]
 "
