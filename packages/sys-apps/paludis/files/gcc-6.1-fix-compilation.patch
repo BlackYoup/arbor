@@ -1,0 +1,32 @@
+Upstream: No
+From e50242500c2da381e7dc2524da94831662070fb6 Mon Sep 17 00:00:00 2001
+From: BlackYoup <a.lefebvre@outlook.fr>
+Date: Sat, 13 Aug 2016 18:02:17 +0000
+Subject: [PATCH] compilation fix
+
+---
+ paludis/resolver/collect_depped_upon.cc | 9 ++++++++-
+ 1 file changed, 8 insertions(+), 1 deletion(-)
+
+diff --git a/paludis/resolver/collect_depped_upon.cc b/paludis/resolver/collect_depped_upon.cc
+index 1dbc7a3..2601faa 100644
+--- a/paludis/resolver/collect_depped_upon.cc
++++ b/paludis/resolver/collect_depped_upon.cc
+@@ -240,7 +240,14 @@ paludis::resolver::dependent_upon(
+     }
+     else
+     {
+-        for (auto& fn : { &PackageID::build_dependencies_key, &PackageID::run_dependencies_key, &PackageID::post_dependencies_key })
++        const decltype ( &PackageID::build_dependencies_key ) dependencies_key[] = {
++            PackageID::build_dependencies_key,
++            &PackageID::run_dependencies_key,
++            &PackageID::post_dependencies_key
++        };
++
++        for (auto& fn : dependencies_key)
+         {
+             auto key(((*id).*fn)());
+             if (key)
+-- 
+2.9.2
+

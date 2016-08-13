@@ -29,6 +29,10 @@ MYOPTIONS="
 LICENCES="GPL-2 vim-syntax? ( vim )"
 SLOT="0"
 
+DEFAULT_SRC_PREPARE_PATCHES=(
+    ${FILES}/gcc-6.1-fix-compilation.patch
+)
+
 DEPENDENCIES="
     build:
         app-doc/asciidoc[>=8.6.3]
