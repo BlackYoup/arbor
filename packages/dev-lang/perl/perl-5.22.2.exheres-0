@@ -15,7 +15,7 @@ DEPENDENCIES+="
         ]]
 "
 
-PLATFORMS="~amd64 ~arm ~armv7 ~x86"
+PLATFORMS="~amd64 ~arm ~armv6 ~armv7 ~x86"
 
 DEFAULT_SRC_PREPARE_PATCHES=(
     -p1 "${FILES}"/${PN}-5.11.3-Remove-Syslog-tests.patch

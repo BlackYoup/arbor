@@ -12,7 +12,7 @@ DOWNLOADS="ftp://xmlsoft.org/${PN}/${PNV}.tar.gz"
 
 LICENCES="MIT"
 SLOT="0"
-PLATFORMS="~amd64 ~arm ~armv7 ~x86"
+PLATFORMS="~amd64 ~arm ~armv6 ~armv7 ~x86"
 MYOPTIONS="crypt debug examples python"
 
 DEPENDENCIES="

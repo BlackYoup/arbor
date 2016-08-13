@@ -17,7 +17,7 @@ REMOTE_IDS="freecode:${PN}"
 
 LICENCES="GPL-2 LGPL-2.1"
 SLOT="0"
-PLATFORMS="~amd64 ~arm ~armv7 ~x86"
+PLATFORMS="~amd64 ~arm ~armv6 ~armv7 ~x86"
 MYOPTIONS="
     debug  [[ description = [ Turn on debugging ] ]]
     python [[ description = [ Install Python bindings (requires swig) ] ]]

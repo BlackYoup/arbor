@@ -8,7 +8,7 @@ SUMMARY="Compression utility designed to be a replacement for compress"
 
 LICENCES="GPL-3"
 SLOT="0"
-PLATFORMS="~amd64 ~arm ~armv7 ~x86"
+PLATFORMS="~amd64 ~arm ~armv6 ~armv7 ~x86"
 MYOPTIONS=""
 
 DEPENDENCIES=""

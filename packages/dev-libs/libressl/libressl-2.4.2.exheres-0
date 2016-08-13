@@ -10,6 +10,6 @@ LIBTLS_VER=11.0.0
 
 require libressl
 
-PLATFORMS="~amd64 ~armv7"
+PLATFORMS="~amd64 ~armv6 ~armv7"
 
 

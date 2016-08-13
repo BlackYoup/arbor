@@ -9,7 +9,7 @@ LICENCES="BSD-4 GPL-2"
 DOWNLOADS+=" https://dev.gentoo.org/~polynomial-c/${PN}-s${PV}-manpages.tar.xz"
 
 SLOT="0"
-PLATFORMS="~amd64 ~arm ~armv7 ~x86"
+PLATFORMS="~amd64 ~arm ~armv6 ~armv7 ~x86"
 MYOPTIONS="
     caps
     idn
