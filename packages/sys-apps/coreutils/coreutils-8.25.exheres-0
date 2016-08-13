@@ -4,7 +4,7 @@
 
 require coreutils
 
-PLATFORMS="~amd64 ~arm ~armv7 ~x86"
+PLATFORMS="~amd64 ~arm ~armv6 ~armv7 ~x86"
 
 # failures for some tests with sydbox (old patches available in git history):
 #  basic-1 p-3 test-bind test-connect
