@@ -144,6 +144,14 @@ gcc_src_prepare() {
 
 gcc_src_configure() {
     local build=$(exhost --build) host=$(exhost --target) target=
+    local plugins=$(if [[ ${PALUDIS_CROSS_COMPILE_HOST} != "armv6-unknown-linux-gnueabihf" ]]; then
+            echo "--enable-plugin --enable-plugins"
+        else
+            echo "--disable-plugin --disable-plugins"
+        fi
+    )
+
+    elog "PALUDIS_CROSS_COMPILE_HOST plugins: ${plugins}"
 
     for target in ${CROSS_COMPILE_TARGETS} ; do
         local gxx_incdir=/usr/${target}/include/c++/${PV%%_p*}
@@ -223,8 +231,7 @@ gcc_src_configure() {
                 --disable-nls                                       \
                 --disable-shared                                    \
                 --enable-lto                                        \
-                --enable-plugin                                     \
-                --enable-plugins                                    \
+                ${plugins}                                          \
                 $(option_enable threads)                            \
                 --enable-languages=c,c++,fortran,objc,obj-c++       \
                 --with-sysroot='""'                                 \
