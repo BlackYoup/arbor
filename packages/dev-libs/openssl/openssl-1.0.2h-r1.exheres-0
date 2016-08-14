@@ -13,7 +13,7 @@ UPSTREAM_RELEASE_NOTES="${HOMEPAGE}/news/announce.html [[ lang = en ]]"
 
 LICENCES="${PN}"
 SLOT="0"
-PLATFORMS="~amd64 ~arm ~armv7 ~x86"
+PLATFORMS="~amd64 ~arm ~armv6 ~armv7 ~x86"
 MYOPTIONS="parts: binaries configuration development documentation libraries"
 
 DEPENDENCIES="
@@ -46,7 +46,7 @@ _openssl_host_os() {
     #   x86:linux-elf # TODO(compnerd) ICC should be linux-ia32-icc
     # )
     case "$(exhost --target)" in
-    arm-exherbo-linux-gnueabi|armv7-unknown-linux-gnueabi|armv7-unknown-linux-gnueabihf)
+    arm-exherbo-linux-gnueabi|armv6-unknown-linux-gnueabi|armv6-unknown-linux-gnueabihf|armv7-unknown-linux-gnueabi|armv7-unknown-linux-gnueabihf)
         echo linux-armv4
     ;;
     i686-pc-linux-*)
