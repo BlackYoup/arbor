@@ -17,16 +17,16 @@ index 1dbc7a3..2601faa 100644
      else
      {
 -        for (auto& fn : { &PackageID::build_dependencies_key, &PackageID::run_dependencies_key, &PackageID::post_dependencies_key })
-+        const decltype ( &PackageID::build_dependencies_key ) dependencies_key[] = {
-+            PackageID::build_dependencies_key,
-+            &PackageID::run_dependencies_key,
-+            &PackageID::post_dependencies_key
-+        };
++       const decltype ( &PackageID::build_dependencies_key ) dependencies_key[] = {
++               &PackageID::build_dependencies_key,
++               &PackageID::run_dependencies_key,
++               &PackageID::post_dependencies_key
++       };
 +
-+        for (auto& fn : dependencies_key)
++       for (auto& fn : dependencies_key)
++       //for (auto& fn : { &PackageID::build_dependencies_key, &PackageID::run_dependencies_key, &PackageID::post_dependencies_key })
          {
              auto key(((*id).*fn)());
              if (key)
 -- 
 2.9.2
-
