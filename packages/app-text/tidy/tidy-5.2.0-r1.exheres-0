@@ -33,5 +33,25 @@ DEFAULT_SRC_PREPARE_PATCHES=(
 CMAKE_SRC_CONFIGURE_OPTIONS=( 'compat-headers TIDY_COMPAT_HEADERS' )
 CMAKE_SRC_CONFIGURE_PARAMS=(
     -DMAN_INSTALL_DIR:STRING=/usr/share/man/man1
+    -DCMAKE_FIND_ROOT_PATH=/usr/x86_64-pc-linux-gnu
 )
 
+src_configure(){
+    cmake_src_configure
+    # It needs target tidy to generate the man file
+    sed -i 's/^man:/\.man:/' ${WORKBASE}/build/CMakeFiles/man.dir/build.make
+    # comment out the line that install the non-generated man file
+    sed -i '105 {s/^/#/}' ${WORKBASE}/build/cmake_install.cmake
+}
+
+# TODO: make the man for tidy with direct commands
+# this setup needs to reconfigure the package on the target
+#pkg_postinst(){
+#    edo cd ${WORKBASE}/build
+#    emake -f ${WORKBASE}/build/CMakeFiles/man.dir/build.make .man
+#    edo cp ${WORKBASE}/build/tidy.1 /usr/share/man/man1/
+#}
+#
+#pkg_postrm(){
+#    edo /usr/share/man/man1/tidy.1
+#}
