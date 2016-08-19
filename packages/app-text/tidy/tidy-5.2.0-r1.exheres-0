@@ -9,7 +9,7 @@ SUMMARY="Tidy the layout and correct errors in HTML and XML documents"
 
 LICENCES="ZLIB"
 SLOT="0"
-PLATFORMS="~amd64 ~arm ~armv7 ~x86"
+PLATFORMS="~amd64 ~arm ~armv6 ~armv7 ~x86"
 MYOPTIONS="
     compat-headers [[ description = [
         Install two renamed headers for compatibility with older projects
