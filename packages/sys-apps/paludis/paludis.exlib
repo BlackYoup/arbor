@@ -31,6 +31,7 @@ SLOT="0"
 
 DEFAULT_SRC_PREPARE_PATCHES=(
     ${FILES}/gcc-6.1-fix-compilation.patch
+    ${FILES}/cross-compile-no-man.patch
 )
 
 DEPENDENCIES="
