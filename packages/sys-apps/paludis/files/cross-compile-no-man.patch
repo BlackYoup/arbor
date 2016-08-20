@@ -1,8 +1,8 @@
-Upstream: No.
-From 17c9830c18d70f7f9d69d9c522ddc8c228b23cac Mon Sep 17 00:00:00 2001
+Upstream: No
+From 3b4cdaf36bb1291e59db45933a19107e4ffeaee6 Mon Sep 17 00:00:00 2001
 From: Arnaud Lefebvre <a.lefebvre@outlook.fr>
-Date: Sat, 20 Aug 2016 13:24:04 +0200
-Subject: [PATCH] Cross compiling: don't execute cave.1 and friends targets
+Date: Sat, 20 Aug 2016 22:52:01 +0200
+Subject: [PATCH] paludis: cross compile: disable man target
 
 ---
  src/clients/cave/Makefile.am | 6 +++---
@@ -13,15 +13,15 @@ index 75db797..bf23b3a 100644
 --- a/src/clients/cave/Makefile.am
 +++ b/src/clients/cave/Makefile.am
 @@ -81,9 +81,9 @@ command_MANS = \
-        cave-update-world.1 \
-        cave-verify.1
+ 	cave-update-world.1 \
+ 	cave-verify.1
  
 -man_MANS = \
--       cave.1 \
--       $(command_MANS)
+-	cave.1 \
+-	$(command_MANS)
 +#man_MANS = \
-+#      cave.1 \
-+#      $(command_MANS)
++#	cave.1 \
++#	$(command_MANS)
  
  man_MANS_txts = $(man_MANS:.1=.txt)
  man_MANS_xmls = $(man_MANS_txts:.txt=.xml)
