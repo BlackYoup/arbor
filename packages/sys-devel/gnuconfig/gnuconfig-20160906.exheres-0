@@ -10,7 +10,7 @@ DOWNLOADS="http://git.savannah.gnu.org/gitweb/?p=config.git;a=snapshot;h=${commi
 
 LICENCES="GPL-3"
 SLOT="0"
-PLATFORMS="~amd64 ~arm ~armv7 ~x86"
+PLATFORMS="~amd64 ~arm ~armv6 ~armv7 ~x86"
 MYOPTIONS="parts: data documentation"
 
 DEPENDENCIES=""
