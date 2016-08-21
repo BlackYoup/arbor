@@ -14,7 +14,7 @@ LICENCES="
     GPL-2    [[ note = [ Applies to the manual & tools ] ]]
 "
 SLOT="0"
-PLATFORMS="~amd64 ~arm ~armv7 ~x86"
+PLATFORMS="~amd64 ~arm ~armv6 ~armv7 ~x86"
 MYOPTIONS="caps"
 
 DEPENDENCIES="

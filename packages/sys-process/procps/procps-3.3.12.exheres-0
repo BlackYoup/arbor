@@ -9,7 +9,7 @@ SUMMARY="Utilities for process information including ps, top and kill"
 
 LICENCES="GPL-2 LGPL-2"
 SLOT="0"
-PLATFORMS="~amd64 ~arm ~armv7 ~x86"
+PLATFORMS="~amd64 ~arm ~armv6 ~armv7 ~x86"
 MYOPTIONS="
     systemd [[ description = [ obtain various information about processes through logind ] ]]
     parts: binaries development documentation libraries
