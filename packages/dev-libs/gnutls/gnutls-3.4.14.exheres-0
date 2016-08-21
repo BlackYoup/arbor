@@ -3,7 +3,7 @@
 
 require gnutls
 
-PLATFORMS="~amd64 ~arm ~armv7 ~x86"
+PLATFORMS="~amd64 ~arm ~armv6 ~armv7 ~x86"
 
 # Parallel make fails in doc/
 DEFAULT_SRC_COMPILE_PARAMS=( -j1 )
