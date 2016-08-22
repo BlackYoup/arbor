@@ -23,7 +23,7 @@ UPSTREAM_CHANGELOG="${HOMEPAGE}/blob/${PV}/CHANGES"
 
 LICENCES="BSD-3 ISC public-domain"
 SLOT="0"
-PLATFORMS="~amd64 ~arm ~armv7 ~x86"
+PLATFORMS="~amd64 ~arm ~armv6 ~armv7 ~x86"
 MYOPTIONS="bash-completion vim-syntax"
 
 DEPENDENCIES="
